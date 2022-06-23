@@ -1,6 +1,8 @@
 # GreatForger
 A terraria mod mainly based on the ExampleMod.
 
+![icon](https://zideapicbed.oss-cn-shanghai.aliyuncs.com/img/icon.png)
+
 ## Overview
 
 First contact with C# as a relaxed project. Going to make a Reforge System with some Cool!!! effect(not in display, but in weapon attribute effect as I am not good at Game Graphics). 
@@ -29,5 +31,7 @@ thanks for the help, guide and opensource code of the following people:
 
 SadOnion, 
 
-Michaelsoftman
+Michaelsoftman,
+
+(Lynx)[https://www.youtube.com/c/FoolstudiosLynx]
 
