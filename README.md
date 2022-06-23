@@ -55,6 +55,8 @@ github helper:
 Discord helper:
 - Michaelsoftman,
 - 眼鏡さん (Glasses-san), 
+
 Youtube tutorial
+
 [Lynx](https://www.youtube.com/c/FoolstudiosLynx)
 
