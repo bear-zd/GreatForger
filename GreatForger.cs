@@ -17,7 +17,7 @@ namespace GreatForger
         }
         public override void Load()
         {
-            Instance = this;
+            Instance = this;    
             GreatForgerUserInterface = new UserInterface();
             base.Load();
         }
