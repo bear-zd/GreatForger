@@ -1,0 +1,9 @@
+displayName = GreatForger
+author = Zidea
+version = 0.1
+homepage = https://twitter.com/zd_bear
+hideCode = false
+hideResources = false
+includeSource = true
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, Old\*, UI
+includePDB = true
