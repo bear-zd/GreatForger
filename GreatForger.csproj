@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="C:\Users\zidea\Documents\My Games\Terraria\tModLoader\ModSources\tModLoader.targets" />
+  <Import Project="..\tModLoader.targets" />
   <PropertyGroup>
     <AssemblyName>GreatForger</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
@@ -18,6 +18,5 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Common\" />
-    <Folder Include="Localization\" />
   </ItemGroup>
 </Project>
