@@ -35,10 +35,16 @@ namespace GreatForger.Common.GlobalItems
         {
 			if (weapon.prefix == ModContent.PrefixType<Infinite2>())
 			{
-				ammo.consumable = false;
+				int lenInventory = player.inventory.GetLength(0);
+				for (int i = 0; i < lenInventory; i++)
+				{
+					if (player.inventory[i] == ammo)
+					{
+						player.inventory[i].stack += 1;
+					}
+				}
 			}
-            base.OnConsumeAmmo(weapon, ammo, player);
-        }
+		}
 
     }
 }

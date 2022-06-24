@@ -3,6 +3,8 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria;
 using Microsoft.Xna.Framework;
+using System;
+
 
 namespace GreatForger
 {
@@ -17,7 +19,7 @@ namespace GreatForger
         }
         public override void Load()
         {
-            Instance = this;    
+            Instance = this;
             GreatForgerUserInterface = new UserInterface();
             base.Load();
         }
@@ -25,6 +27,33 @@ namespace GreatForger
         {
             Instance = null;
         }
+
+        /* randomDebuff
+         * 
+         * 
+         * 
+         * 
+         */
+        public List<float> randomDebuff(List<int> validBuff, List<float> defaultRatio, float totalDecease)
+        { 
+            Random rand = new Random();
+            int debuffNum = rand.Next(1, 3);
+            switch(debuffNum)
+            {
+                case 1:
+                    {
+                        
+                    }
+                    
+            }
+        
+
+            
+            return { };
+        }
+
+
+            
 
     }
 }

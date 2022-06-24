@@ -133,7 +133,7 @@ namespace GreatForger.Content.NPCs
 				}
 
 				// Player has to have either an ExampleItem or an ExampleBlock in order for the NPC to spawn
-				if (player.inventory.Any(item => item.type == ModContent.ItemType<Items.Placeables.Ruam>()))
+				if (numTownNPCs > 3)
 				{
 					return true;
 				}
@@ -151,7 +151,7 @@ namespace GreatForger.Content.NPCs
 				for (int y = top; y <= bottom; y++)
 				{
 					int type = Main.tile[x, y].TileType;
-					if (type == ModContent.TileType<Tiles.Ruam>() || type == TileID.Chairs || type == TileID.WorkBenches || type == TileID.Beds || type == TileID.OpenDoor || type == TileID.ClosedDoor)
+					if (type == TileID.Chairs || type == TileID.WorkBenches || type == TileID.Beds || type == TileID.OpenDoor || type == TileID.ClosedDoor)
 					{
 						score++;
 					}
@@ -163,7 +163,8 @@ namespace GreatForger.Content.NPCs
 				}
 			}
 
-			return score >= ((right - left) * (bottom - top)) / 2;
+			return score >= ((right - left) * (bottom - top)) / 8;
+			// old: return score >= ((right - left) * (bottom - top)) / 2;
 		}
 
 		public override ITownNPCProfile TownNPCProfile()
@@ -212,7 +213,7 @@ namespace GreatForger.Content.NPCs
 		public override void SetChatButtons(ref string button, ref string button2)
 		{ // What the chat buttons are when you open up the chat UI
 			button = Language.GetTextValue("LegacyInterface.28");
-			button2 = "Awesomeify";
+			button2 = "GreatPrefix!";
 			if (Main.LocalPlayer.HasItem(ItemID.LifeCrystal))
 			{
 				button = "Upgrade " + Lang.GetItemNameValue(ModContent.ItemType<Items.Placeables.Ruam>());
@@ -229,6 +230,7 @@ namespace GreatForger.Content.NPCs
 				{
 					SoundEngine.PlaySound(SoundID.Item37); // Reforge/Anvil sound
 
+					
 					Main.npcChatText = $"I upgraded your {Lang.GetItemNameValue(ItemID.LifeCrystal)} to three Ruam";
 
 					int LifeCrystalItemIndex = Main.LocalPlayer.FindItem(ItemID.LifeCrystal);

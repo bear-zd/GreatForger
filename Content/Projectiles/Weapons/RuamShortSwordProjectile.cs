@@ -19,7 +19,7 @@ namespace GreatForger.Content.Projectiles.Weapons
             Projectile.DamageType = DamageClass.Melee;
             Projectile.ownerHitCheck = true;
             Projectile.extraUpdates = 1;
-            Projectile.timeLeft = 300;
+            Projectile.timeLeft = 3000;
 
             Projectile.aiStyle = ProjAIStyleID.ShortSword;
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Terraria;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 
 namespace GreatForger.Content.Prefixes
 {
@@ -23,14 +24,9 @@ namespace GreatForger.Content.Prefixes
         }
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            Random ran = new Random();
-            // will generate more high quality debuff
-            int numDebuff = ran.Next(1, 3);
-
-            
-            // infinite means no cost of ammo and mana
+            // infinite means no cost of ammo 
             manaMult *= 0;
-            shootSpeedMult *= 0.4f;
+            base.SetStats(ref damageMult, ref knockbackMult, ref useTimeMult, ref scaleMult, ref shootSpeedMult, ref manaMult, ref critBonus);
         }
 
     }

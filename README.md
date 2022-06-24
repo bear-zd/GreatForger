@@ -49,14 +49,25 @@ after the mod has been develop enough , I will release it in github release and 
   - A boss and some other enemy
   - How Great Forger generate in the world
 
+## download
+
+you can subcribe on tmol mod broswer 
+
+![image-20220624162521600](https://zideapicbed.oss-cn-shanghai.aliyuncs.com/img/image-20220624162521600.png)
+
+or download the release on github:
+
 
 ## thanks
 
 thanks for the help, guide and opensource code of the following people:
 
 github helper:
-- SadOnion, 
+
+- SadOnion
+
 Discord helper:
+
 - Michaelsoftman,
 - 眼鏡さん (Glasses-san), 
 - direwolf420

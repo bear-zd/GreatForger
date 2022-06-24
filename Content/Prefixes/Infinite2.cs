@@ -12,7 +12,7 @@ namespace GreatForger.Content.Prefixes
 
         public override bool CanRoll(Item item)
         {
-            return false;
+            return true;
         }
         public override float RollChance(Item item)
         {
