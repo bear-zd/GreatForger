@@ -10,7 +10,10 @@ namespace GreatForger.Content.Prefixes
     { //this is the infinite prefix for the gun.
         public override PrefixCategory Category => PrefixCategory.Ranged;
 
-
+        public override bool CanRoll(Item item)
+        {
+            return false;
+        }
         public override float RollChance(Item item)
         {
             return 5f;
@@ -18,8 +21,6 @@ namespace GreatForger.Content.Prefixes
         public override void Apply(Item item)
         {
             item.autoReuse = true;
-            item.consumeAmmoOnFirstShotOnly = true;
-            Item usedAmmo = new Item(item.useAmmo);
             base.Apply(item);
         }
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)

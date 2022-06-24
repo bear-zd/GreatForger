@@ -12,6 +12,7 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.UI.Chat;
 using static Terraria.ModLoader.ModContent;
+using System;
 
 namespace GreatForger.Content.UI
 {
@@ -141,20 +142,31 @@ namespace GreatForger.Content.UI
 			int stack = _vanillaItemSlot.Item.stack;
             // GlobalItem test = new GlobalItem(_vanillaItemSlot.Item);
 
-            Item reforgeItem = new Item(); 
-
+            Item reforgeItem = new Item();
+			reforgeItem.netDefaults(_vanillaItemSlot.Item.netID);
 			reforgeItem = reforgeItem.CloneWithModdedDataFrom(_vanillaItemSlot.Item);
-
+			int forgeRes = Main.rand.Next(4);
 			// This is the main effect of this slot. Giving the Awesome prefix 90% of the time and the ReallyAwesome prefix the other 10% of the time. All for a constant 1 gold. Useless, but informative.
-			if (Main.rand.NextBool(10))
+			switch (forgeRes)
 			{
-				reforgeItem.Prefix(ModContent.PrefixType<GreatForgerPrefix>());
-				//old: reforgeItem.Prefix(GetInstance<Prefixes.GreatForgerPrefix>().PrefixType("ReallyAwesome"));
-			}
-			else
-			{
-				reforgeItem.Prefix(ModContent.PrefixType<GreatForgerDerivedPrefix>());
-				//old: reforgeItem.Prefix(GetInstance<GreatForger>().PrefixType("Awesome"));
+				case 1:
+					{
+						reforgeItem.Prefix(ModContent.PrefixType<GreatForgerPrefix>());
+						break;
+						//old: reforgeItem.Prefix(GetInstance<Prefixes.GreatForgerPrefix>().PrefixType("ReallyAwesome"));
+					}
+				case 2:
+					{	
+                        
+						reforgeItem.Prefix(ModContent.PrefixType<GreatForgerDerivedPrefix>());
+						break;
+						//old: reforgeItem.Prefix(GetInstance<GreatForger>().PrefixType("Awesome"));
+					}
+				case 3:
+					{ 
+						reforgeItem.Prefix(ModContent.PrefixType<Infinite2>());
+						break;
+					}
 			}
 
 			_vanillaItemSlot.Item = reforgeItem.Clone();
