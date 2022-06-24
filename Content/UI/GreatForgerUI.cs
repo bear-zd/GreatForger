@@ -145,6 +145,7 @@ namespace GreatForger.Content.UI
             Item reforgeItem = new Item();
 			reforgeItem.netDefaults(_vanillaItemSlot.Item.netID);
 			reforgeItem = reforgeItem.CloneWithModdedDataFrom(_vanillaItemSlot.Item);
+			DamageClass weaponClass = reforgeItem.DamageType;
 			int forgeRes = Main.rand.Next(4);
 			// This is the main effect of this slot. Giving the Awesome prefix 90% of the time and the ReallyAwesome prefix the other 10% of the time. All for a constant 1 gold. Useless, but informative.
 			switch (forgeRes)
@@ -163,9 +164,23 @@ namespace GreatForger.Content.UI
 						//old: reforgeItem.Prefix(GetInstance<GreatForger>().PrefixType("Awesome"));
 					}
 				case 3:
-					{ 
-						reforgeItem.Prefix(ModContent.PrefixType<Infinite2>());
-						break;
+					{
+						if (weaponClass == DamageClass.Ranged)
+						{
+							reforgeItem.Prefix(ModContent.PrefixType<Infinite2>());
+							break;
+						}
+						else if (weaponClass == DamageClass.Magic)
+                        {
+							reforgeItem.Prefix(ModContent.PrefixType<Infinite>());
+							break;
+                        }
+						else
+                        {
+							reforgeItem.Prefix(ModContent.PrefixType<GreatForgerPrefix>());
+							break;
+                        }
+
 					}
 			}
 

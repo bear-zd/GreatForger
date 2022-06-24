@@ -13,13 +13,13 @@ namespace GreatForger.Content.Prefixes
         {
             return 5f;
         }
+        public override bool CanRoll(Item item)
+        {
+            return false;
+        }
         public override void Apply(Item item)
         { 
             base.Apply(item);
-        }
-        public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
-        {
-            shootSpeedMult *= 0.6f;
         }
     }
 }

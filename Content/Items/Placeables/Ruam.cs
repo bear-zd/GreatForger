@@ -33,5 +33,12 @@ namespace GreatForger.Content.Items.Placeables
             Item.placeStyle = 0;
 
         }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<RuamOre>(), 3)
+                .AddTile(TileID.Stone)
+                .Register();
+        }
     }
 }

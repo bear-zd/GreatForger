@@ -12,7 +12,7 @@ namespace GreatForger.Common.GlobalItems
     {
 		public override bool AppliesToEntity(Item item, bool lateInstatiation)
 		{
-			return  item.damage > -1 ;
+			return  item.DamageType == DamageClass.Ranged ;
 
 			// return item.damage > -1 && item.prefix == ModContent.PrefixType<Infinite>(); 
 		}

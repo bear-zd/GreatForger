@@ -23,7 +23,7 @@ namespace GreatForger.Content.Prefixes
 		// Determines if it can roll at all.
 		// Use this to control if a prefix can be rolled or not.
 		public override bool CanRoll(Item item) {
-			return true;
+			return false;
 		}
 
 		// Use this function to modify these stats for items which have this prefix:

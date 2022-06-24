@@ -14,18 +14,13 @@ namespace GreatForger.Content.Prefixes
         }
         public override bool CanRoll(Item item)
         {
-            return true;
+            return false;
         }
         public override void Apply(Item item)
         {
             base.Apply(item);
         }
-        public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
-        {
-            // infinite means no cost of ammo and mana
-            manaMult *= 0;
-            damageMult *= 0.6f;
-        }
+
 
     }
 
