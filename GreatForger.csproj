@@ -17,6 +17,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

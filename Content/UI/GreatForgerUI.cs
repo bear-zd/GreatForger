@@ -139,10 +139,9 @@ namespace GreatForger.Content.UI
 
 			bool favorited = _vanillaItemSlot.Item.favorited;
 			int stack = _vanillaItemSlot.Item.stack;
+            // GlobalItem test = new GlobalItem(_vanillaItemSlot.Item);
 
-			Item reforgeItem = new Item();
-
-			reforgeItem.netDefaults(_vanillaItemSlot.Item.netID);
+            Item reforgeItem = new Item(); 
 
 			reforgeItem = reforgeItem.CloneWithModdedDataFrom(_vanillaItemSlot.Item);
 

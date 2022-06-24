@@ -1,6 +1,8 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using System;
+using static Terraria.ModLoader.ModContent;
 
 namespace GreatForger.Content.Prefixes
 {
@@ -13,18 +15,12 @@ namespace GreatForger.Content.Prefixes
         {
             return 5f;
         }
-        public override bool CanRoll(Item item)
-        {
-            return true;
-        }
         public override void Apply(Item item)
         {
-            
-            base.Apply(item);
             item.autoReuse = true;
-            Item Ammo = new Item(item.useAmmo);
-            Ammo.consumable = false;            
-
+            item.consumeAmmoOnFirstShotOnly = true;
+            Item usedAmmo = new Item(item.useAmmo);
+            base.Apply(item);
         }
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {

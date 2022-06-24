@@ -25,20 +25,38 @@ namespace GreatForger.Content.Tiles
 
             AddMapEntry(new Color(173, 47, 69), Language.GetText("Ruma"));
         }
+        public override bool RightClick(int i, int j)
+        {
+            return this.Drop(i, j);
+        }
         public override bool Drop(int x, int y)
         {
+            
             Tile t = Main.tile[x, y];
             int style = t.TileFrameX / 10;
-
+            int numItem = 0;
+            /*
+             * Player nowPlayer = Main.LocalPlayer;
+            
+            int lenInventory = nowPlayer.inventory.GetLength(0);
+            for (int i=0;i<lenInventory;i++)
+            {
+                if (nowPlayer.inventory[i].type == ModContent.ItemType<Items.Placeables.Ruam>())
+                {
+                    numItem = nowPlayer.inventory[i].stack;
+                }
+            }
+            */
             switch(style)
             {
-                case 0: Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeables.Ruam>());break;
+                case 0: Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, ModContent.ItemType<Items.Placeables.Ruam>(),numItem*2);break;
                 case 1:
                     break;
                 case 2:
                     break;
             }
             return base.Drop(x, y);
+ 
         }
     }
 }
