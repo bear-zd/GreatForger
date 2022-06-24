@@ -1,7 +1,7 @@
 displayName = GreatForger
 author = Zidea
 version = 0.1
-homepage = https://twitter.com/zd_bear
+homepage = https://github.com/bear-zd/GreatForger
 hideCode = false
 hideResources = false
 includeSource = true
