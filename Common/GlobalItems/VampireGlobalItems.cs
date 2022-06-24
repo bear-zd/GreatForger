@@ -7,6 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using GreatForger.Content.Prefixes;
+using GreatForger.Content.Items.Weapons;
 
 namespace GreatForger.Common.GlobalItems
 {
@@ -16,13 +17,7 @@ namespace GreatForger.Common.GlobalItems
         {
             return entity.damage != -1;
         }
-        public override bool Shoot(Item item, Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-        {
-            if (item.prefix == ModContent.PrefixType<Vampire>())
-            {
-                return false;
-            }
-            return base.Shoot(item, player, source, position, velocity, type, damage, knockback);
-        }
+        
+
     }
 }
