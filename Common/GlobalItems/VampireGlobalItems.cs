@@ -17,7 +17,17 @@ namespace GreatForger.Common.GlobalItems
         {
             return entity.damage != -1;
         }
-        
+        public override void OnHitNPC(Item item, Player player, NPC target, int damage, float knockBack, bool crit)
+        {
+            if (item.prefix == ModContent.PrefixType<Vampire>())
+            {
+                Projectile vampireProjectile = new Projectile();
+                vampireProjectile.vampireHeal(item.damage, target.position, target);
+            }
+            base.OnHitNPC(item, player, target, damage, knockBack, crit);
+
+        }
+
 
     }
 }

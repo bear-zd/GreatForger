@@ -46,17 +46,17 @@ namespace GreatForger.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
+                .AddRecipeGroup(RecipeGroupID.Wood, 10)
                 .AddIngredient(ModContent.ItemType<Placeables.Ruam>(), 8)
-                .AddTile(TileID.Anvils)
+                .AddTile(TileID.DemonAltar)
                 .Register();
 
         }
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
-            int health = player.statLife;
-            int maxhealth = player.statLifeMax;
-            damage = new StatModifier(1f, 4 * health / maxhealth);
+            damage = new StatModifier(1f, 2 * player.statLife / player.statLifeMax2);
             base.ModifyWeaponDamage(player, ref damage);
         }
     }
+    
 }

@@ -42,8 +42,8 @@ namespace GreatForger.Content.Items.Weapons
         {
             CreateRecipe()
                 .AddRecipeGroup(RecipeGroupID.Wood, 10)
-                .AddIngredient(ModContent.ItemType<Placeables.Ruam>(), 20)
-                .AddTile(TileID.Anvils)
+                .AddIngredient(ModContent.ItemType<Placeables.Ruam>(), 5)
+                .AddTile(TileID.DemonAltar)
                 .Register();
         }
     }

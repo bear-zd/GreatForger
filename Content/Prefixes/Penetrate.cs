@@ -14,7 +14,7 @@ namespace GreatForger.Content.Prefixes
         }
         public override bool CanRoll(Item item)
         {
-            return false;
+            return true;
         }
         public override void Apply(Item item)
         {
