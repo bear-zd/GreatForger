@@ -16,9 +16,13 @@ namespace GreatForger.Content.Prefixes
         {
             return true;
         }
-        public override void Apply(Item item)
+        public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            base.Apply(item);
+            // infinite means no cost of mana, in contraty, it will not gain the better effect of the magic weapon.
+            shootSpeedMult *= 0.9f;
+            knockbackMult *= 0.9f;
+            damageMult *= 1.1f;
+            base.SetStats(ref damageMult, ref knockbackMult, ref useTimeMult, ref scaleMult, ref shootSpeedMult, ref manaMult, ref critBonus);
         }
 
 

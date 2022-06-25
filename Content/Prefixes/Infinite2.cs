@@ -25,8 +25,10 @@ namespace GreatForger.Content.Prefixes
         }
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            // infinite means no cost of ammo and mana
-            shootSpeedMult *= 0.6f;
+            // infinite means no cost of ammo as it will not decrease a lot as it always not important while fighe 
+            knockbackMult *= 1.1f;
+            damageMult *= 1.15f;
+            shootSpeedMult *= 1.05f;
         }
 
     }
