@@ -1,6 +1,6 @@
 displayName = GreatForger
 author = Zidea
-version = 0.12
+version = 0.13.1
 homepage = https://github.com/bear-zd/GreatForger
 hideCode = false
 hideResources = false

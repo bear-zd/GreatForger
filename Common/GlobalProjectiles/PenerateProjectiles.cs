@@ -14,15 +14,16 @@ namespace GreatForger.Common.GlobalProjectiles
         {
             return entity.damage != -1;
         }
+        
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
-            if (source is EntitySource_ItemUse itemUse && 
-                itemUse.Item.prefix == ModContent.PrefixType<Penetrate>())
+            if (source is EntitySource_ItemUse itemUse && itemUse.Item.prefix == ModContent.PrefixType<Penetrate>())
             {
                 projectile.tileCollide = false;
                 if (projectile.timeLeft >=20*60*60)
                 { projectile.timeLeft = 60 * 60; }
             }
         }
+        
     }
 }
