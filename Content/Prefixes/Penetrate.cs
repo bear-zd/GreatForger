@@ -5,7 +5,7 @@ namespace GreatForger.Content.Prefixes
 {
     internal class Penetrate : ModPrefix
     {
-        public override PrefixCategory Category => PrefixCategory.Ranged;
+        public override PrefixCategory Category => PrefixCategory.AnyWeapon;
 
 
         public override float RollChance(Item item)

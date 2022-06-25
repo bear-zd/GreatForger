@@ -34,20 +34,22 @@ after the mod has been develop enough , I will release it in github release and 
 
 ## task list
 - Some maybe awsome prefix?
-  - Infinite(for ranged and magic)
-  - Penetrate(projectile can penetrate every block for all shoot projectile weapon)
-  - Vampire(regain blood will using)
-  - Greedy(more money and more damage)
-  - Split(projectile will split into many picies)
-  - And so on(if you have a good idea about new prefix please provide me by issue )
-- NPC frame image bug(he still using the animation of guide)
-- Can't be roll by goblin and Can't have dissatisfy prefix for the different type of weapon
-- A random better debuff not just decease one attribute
-- Some little bugs(the prefix can be forge by goblin but con't by GreatForger.What a sad!)
+
+  - [x] Infinite(for ranged and magic)
+  - [x] Penetrate(projectile can penetrate every block for all shoot projectile weapon)
+  - [x] Vampire(regain blood will using weapon)
+  - [ ] Greedy(more money and more damage)
+  - [ ] Split(projectile will split into many picies)
+  - [ ] And so on(if you have a good idea about new prefix please provide me by issue )
+- [ ] NPC frame image bug(he still using the animation of guide)
+- [ ] Can't be roll by goblin and Can't have dissatisfy prefix for the different type of weapon
+- [ ] A random better debuff not just decease one attribute
+- [ ] Some little bugs(the prefix can be forge by goblin but con't by GreatForger.What a sad!)
 - For future there are still a lot work to do:
-  - A biome where generate ruma
-  - A boss and some other enemy
-  - How Great Forger generate in the world
+  - [ ] A biome where generate ruma
+  - [ ] A boss and some other enemy
+  - [ ] How Great Forger generate in the world
+  - [ ] The shit Last Prism Penetrate is hard to decide as it is shoot by the projectile object.
 
 ## download
 
