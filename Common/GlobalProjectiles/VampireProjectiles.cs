@@ -40,8 +40,9 @@ namespace GreatForger.Common.GlobalProjectiles
         }
         public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
         {
+            damage = (int)(damage * 0.8f);
             if (vampire == true)
-            { projectile.vampireHeal(projectile.damage/3, target.position, target); }
+            { projectile.vampireHeal(damage/4, target.position, target); }
             base.OnHitNPC(projectile, target, damage, knockback, crit);
         }
     }

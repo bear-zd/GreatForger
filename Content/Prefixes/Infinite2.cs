@@ -29,6 +29,7 @@ namespace GreatForger.Content.Prefixes
             knockbackMult *= 1.1f;
             damageMult *= 1.15f;
             shootSpeedMult *= 1.05f;
+            base.SetStats(ref damageMult, ref knockbackMult, ref useTimeMult, ref scaleMult, ref shootSpeedMult, ref manaMult, ref critBonus);
         }
 
     }

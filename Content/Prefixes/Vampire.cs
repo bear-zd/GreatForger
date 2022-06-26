@@ -11,7 +11,7 @@ namespace GreatForger.Content.Prefixes
         public override PrefixCategory Category => PrefixCategory.AnyWeapon;
         public override float RollChance(Item item)
         {
-            return 5f;
+            return 2f;
         }
         public override bool CanRoll(Item item)
         {
