@@ -22,7 +22,7 @@ namespace GreatForger.Common.GlobalItems
             if (item.prefix == ModContent.PrefixType<Vampire>())
             {
                 Projectile vampireProjectile = new Projectile();
-                vampireProjectile.vampireHeal(damage/4, target.position, target);
+                vampireProjectile.vampireHeal(damage/2, target.position, target);
             }
             base.OnHitNPC(item, player, target, damage, knockBack, crit);
 

@@ -42,7 +42,7 @@ namespace GreatForger.Common.GlobalProjectiles
         {
             damage = (int)(damage * 0.8f);
             if (vampire == true)
-            { projectile.vampireHeal(damage/4, target.position, target); }
+            { projectile.vampireHeal(damage/2, target.position, target); }
             base.OnHitNPC(projectile, target, damage, knockback, crit);
         }
     }
