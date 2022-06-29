@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace GreatForger.Content.Prefixes
 {
     internal class Platform : ModPrefix
-    {
+    {/*
         public override PrefixCategory Category => PrefixCategory.Accessory;
         public override float RollChance(Item item)
         {
@@ -14,7 +14,8 @@ namespace GreatForger.Content.Prefixes
         }
         public override bool CanRoll(Item item)
         {
-            return true;
+            return false;
         }
+        */
     }
 }

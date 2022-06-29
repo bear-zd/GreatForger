@@ -33,6 +33,7 @@ namespace GreatForger.Common.GlobalProjectiles
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
             vampire = false;
+            Player nowPlayer = Main.LocalPlayer;
             if (source is EntitySource_ItemUse itemUse && itemUse.Item.prefix == ModContent.PrefixType<Vampire>())
             {
                 vampire = true;

@@ -8,7 +8,8 @@ using System;
 namespace GreatForger.Common.GlobalItems
 {
     internal class PlatformItems : GlobalItem
-    {
+    {/*
+        public static bool genPlatform = false;
 		public override bool AppliesToEntity(Item item, bool lateInstatiation)
 		{
 			return item.accessory == true;
@@ -20,37 +21,37 @@ namespace GreatForger.Common.GlobalItems
 		}
         public override bool WingUpdate(int wings, Player player, bool inUse)
         {
-            if (player.wingTime == 0 && player.velocity.Y>=5f && !inUse)
+            if (player.wingTime == player.wingTimeMax);
+            genPlatform = true;
+            if (player.wingTime == 0 && player.velocity.Y>=5f && !inUse && genPlatform)
             {
-                int x = player.Center.ToTileCoordinates().X;
-                x += (int)(5 / player.velocity.Y * player.velocity.X);
-                // _ = WorldGen.PlaceTile(i: (int)player.Center.X, j: (int)player.Center.Y, Type: TileID.Platforms); 
-                _ = WorldGen.PlaceTile(i:  x, 
-                    j: player.Center.ToTileCoordinates().Y + 5, Type: TileID.Platforms, forced: true);                
-            }
-            /*
-            for (int i = 0; i < Player.armor.GetLength(0); i++)
-            {
-                if (item.prefix == ModContent.PrefixType<Platform>() &&
-                    nowPlayer.armor[i].type == item.type)
+                for (int i=0 ; i < player.inventory.GetLength(0); i++)
                 {
-
-                    Console.WriteLine("platform detected!");
-                    if (nowPlayer.wingTime == 0)
+                    if (player.inventory[i].createTile > 0 && TileID.Sets.Platforms[player.inventory[i].createTile] && player.inventory[i].favorited) 
                     {
-                        Tile platformTile = new Tile();
-                        platformTile.TileType = TileID.Platforms;
-                        platformTile.TileFrameX = (short)nowPlayer.position.X;
-                        platformTile.TileFrameY = (short)nowPlayer.position.Y;
-                        _ = platformTile.HasTile;
-                        Console.WriteLine("platform gen!");
+                            int x = player.Center.ToTileCoordinates().X;
+                            int y = player.Center.ToTileCoordinates().Y;
+                        float vy = player.velocity.Y;
+                        float vx = player.velocity.X;
+                        int tile = player.inventory[i].createTile;
+                            x += (int)(5 / vy * vx);
+                            player.inventory[i].stack -= 3;
+                            // _ = WorldGen.PlaceTile(i: (int)player.Center.X, j: (int)player.Center.Y, Type: TileID.Platforms); 
+                            _ = WorldGen.PlaceTile(i: x,
+                                j: y + 5, Type: tile, forced: true);
+                            _ = WorldGen.PlaceTile(i: x - 1,
+                                j: y + 5, Type: tile, forced: true);
+                            _ = WorldGen.PlaceTile(i: x + 1,
+                                j: y + 5, Type: tile, forced: true);
+                        genPlatform = false;
+                        break;
 
                     }
-                }            
-            */
+                }                
+            }
                 return base.WingUpdate(wings, player, inUse);
         
 
-        }
+        }*/
     }
 }
