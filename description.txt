@@ -1,3 +1,5 @@
 GreatForger is a extra prefix mod which mainly contain some Great effect such as infinite ammo , vampire effect , penerate projectile and so on.
-It just develop in my free time , so it will cost a lot of time to update to make it. you can star of watch my github repository:https://github.com/bear-zd/GreatForger to get the newest update and push me to work on it.
+It just develop in my free time , so it will cost a lot of time to update to make it. you can star of watch my github repository: https://github.com/bear-zd/GreatForger to get the newest update and push me to work on it.
+
+of course you can contact me on discord tmodloader server: bear_zd or twitter: https://twitter.com/zd_bear
 
